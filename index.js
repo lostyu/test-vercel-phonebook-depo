@@ -1,6 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
+const path = require('path')
 const app = express()
 const PORT = 3001
 
@@ -52,7 +53,7 @@ const morganFormat = (tokens, req, res) => {
 app.use(express.json())
 app.use(morgan(morganFormat))
 app.use(cors())
-app.use(express.static('dist'))
+app.use(express.static(path.join(__dirname, 'dist')))
 
 app.get('/info', (req, res) => {
   const count = persons.length
