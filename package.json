@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "cd ../phonebook && rm -rf ./dist && npm run build && cp -r ./dist ../phonebook-backend"
+    "build:ui": "cd ../phonebook && rm -rf ./dist && npm run build && cp -r ./dist ../phonebook-backend"
   },
   "keywords": [],
   "author": "",
